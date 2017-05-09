@@ -1,0 +1,50 @@
+* {
+    color: #333333;
+}
+
+#male-players, #female-players {
+    margin-bottom: 10px;
+}
+
+.player-name, .delete {
+    margin: 5px;
+}
+
+#game-on {
+    display: none;
+}
+
+#game-on .row {
+    height: 100vh;
+}
+
+#game-on .btn, #at-bat {
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
+}
+
+.top {
+    margin-top: 2vh;
+}
+
+.heading h5{
+    padding-bottom: 2vh;
+    border-bottom: 1px solid #333333;
+}
+
+.list {
+    height: 58vh;
+    overflow: scroll;
+    margin-bottom: 2vh;
+}
+
+#at-bat {
+    margin: 0;
+    font-size: 80px;
+}
+
+#restart-game {
+    display: none;
+    margin-right: 5px;
+}

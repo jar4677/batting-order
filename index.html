@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Batting Order</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container-fluid" id="player-entry">
+    <div class="row top">
+        <div class="col-xs-12 text-center">
+            <button class="btn btn-sm btn-danger pull-left" id="clear-all">Clear All</button>
+            <button class="btn btn-sm btn-info pull-right" id="start-game">Start Game</button>
+            <button class="btn btn-sm btn-warning pull-right" id="restart-game">Restart Game</button>
+            <h3>Player Names</h3>
+        </div>
+        <div class="col-xs-6 text-center heading">
+            <h5><b>Male</b></h5>
+        </div>
+        <div class="col-xs-6 text-center heading">
+            <h5><b>Female</b></h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 text-center list">
+            <ul class="list-unstyled" id="male-players"></ul>
+        </div>
+        <div class="col-xs-6 text-center list">
+            <ul class="list-unstyled" id="female-players"></ul>
+        </div>
+    </div>
+    <div class="row buttons">
+        <div class="col-xs-6 text-center">
+            <button class="btn btn-success btn-sm add-player" data-group="male">Add Male Player</button>
+        </div>
+        <div class="col-xs-6 text-center">
+            <button class="btn btn-success btn-sm add-player" data-group="female">Add Female Player</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" id="game-on">
+    <div class="row">
+        <div class="col-xs-2 text-center">
+            <button class="btn btn-info btn-lg" id="edit">&lang; Edit</button>
+        </div>
+        <div class="col-xs-8 text-center">
+            <h1 id="at-bat"></h1>
+        </div>
+        <div class="col-xs-2 text-center">
+            <button class="btn btn-success btn-lg" id="next">Next &rang;</button>
+        </div>
+    </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
