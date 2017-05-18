@@ -14,14 +14,22 @@
     display: none;
 }
 
-#game-on .row {
-    height: 100vh;
+#game-on .player-list {
+    height: 10vh;
+}
+
+#player-at-bat{
+    height: 80vh;
 }
 
 #game-on .btn, #at-bat {
     position: relative;
-    top: 50vh;
+    top: 40vh;
     transform: translateY(-50%);
+}
+
+#game-on .player-list-name, #game-on .fa {
+    margin-right: 10px;
 }
 
 .top {
@@ -42,6 +50,11 @@
 #at-bat {
     margin: 0;
     font-size: 80px;
+}
+
+.at-bat {
+    color: red;
+    font-weight: bold;
 }
 
 #restart-game {

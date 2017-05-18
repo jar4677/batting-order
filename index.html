@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/dc9ccf8749.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -43,15 +44,27 @@
     </div>
 </div>
 <div class="container-fluid" id="game-on">
-    <div class="row">
+    <div class="row player-list text-center">
+        <div class="col-xs-12">
+            <i class="fa fa-venus"></i>
+            <span id="female-player-list"></span>
+        </div>
+    </div>
+    <div class="row" id="player-at-bat">
         <div class="col-xs-2 text-center">
-            <button class="btn btn-info btn-lg" id="edit">&lang; Edit</button>
+            <button class="btn btn-info btn-lg" id="edit">&lang; Prev</button>
         </div>
         <div class="col-xs-8 text-center">
             <h1 id="at-bat"></h1>
         </div>
         <div class="col-xs-2 text-center">
             <button class="btn btn-success btn-lg" id="next">Next &rang;</button>
+        </div>
+    </div>
+    <div class="row player-list text-center">
+        <div class="col-xs-12">
+            <i class="fa fa-mars"></i>
+            <span id="male-player-list"></span>
         </div>
     </div>
 </div>
