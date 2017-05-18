@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width">
     <title>Batting Order</title>
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+          type="text/css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/dc9ccf8749.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="container-fluid" id="starting-screen">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <h1>Batting Order</h1>
+            <h5>Select team to load:</h5>
+        </div>
+    </div>
+    <div class="row" id="team-buttons"></div>
+</div>
 <div class="container-fluid" id="player-entry">
     <div class="row top">
         <div class="col-xs-12 text-center">
@@ -46,13 +56,16 @@
 <div class="container-fluid" id="game-on">
     <div class="row player-list text-center">
         <div class="col-xs-12">
-            <i class="fa fa-venus"></i>
-            <span id="female-player-list"></span>
+            <div class="vertical-center">
+                <i class="fa fa-venus player-list-name"></i>
+                <span id="female-player-list"></span>
+            </div>
         </div>
     </div>
     <div class="row" id="player-at-bat">
         <div class="col-xs-2 text-center">
-            <button class="btn btn-info btn-lg" id="edit">&lang; Prev</button>
+            <!--<button class="btn btn-info btn-lg" id="edit">Edit</button>-->
+            <button class="btn btn-info btn-lg" id="prev">&lang; Prev</button>
         </div>
         <div class="col-xs-8 text-center">
             <h1 id="at-bat"></h1>
@@ -63,8 +76,10 @@
     </div>
     <div class="row player-list text-center">
         <div class="col-xs-12">
-            <i class="fa fa-mars"></i>
-            <span id="male-player-list"></span>
+            <div class="vertical-center">
+                <i class="fa fa-mars player-list-name"></i>
+                <span id="male-player-list"></span>
+            </div>
         </div>
     </div>
 </div>

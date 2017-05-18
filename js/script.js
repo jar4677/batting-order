@@ -2,30 +2,48 @@
  * Created by jonrasmussen on 5/4/17.
  */
 $(document).ready(function () {
-    let pixelTeam = {
-        male: [
-            'Jon R.',
-            'Ryan',
-            'Dan',
-            'John H.',
-            'Jan',
-            'Matt',
-            'Chris'
-        ],
-        female: [
-            'Monica',
-            'Samantha',
-            'Kahla',
-            'Erin',
-            'Tanya',
-            'Audrey'
-        ]
-    };
+    let teams = [
+        {
+            name: 'Blank',
+            roster: {
+                male: [],
+                female: []
+            }
+        },
+        {
+            name: 'Pixel Hitters',
+            roster: {
+                male: [
+                    'Jon R.',
+                    'Ryan',
+                    'Dan',
+                    'John H.',
+                    'Jan',
+                    'Matt',
+                    'Chris'
+                ],
+                female: [
+                    'Monica',
+                    'Samantha',
+                    'Kahla',
+                    'Erin',
+                    'Tanya',
+                    'Audrey'
+                ]
+            }
+        }
+    ];
 
-    game.setRoster(pixelTeam);
-
-    /** Load Current Roster **/
-    game.displayRoster();
+    teams.map(function (team) {
+        let button = $('<button>').addClass('btn btn-xl btn-info').text(team.name).click(function () {
+            game.setRoster(team.roster);
+            game.displayRoster();
+            $('#starting-screen').hide();
+            $('#player-entry').show();
+        });
+        let div = $('<div>').addClass('col-xs-3 text-center').html(button);
+        $('#team-buttons').append(div);
+    });
 
     $('.add-player').click(function () {
         let group = $(this).attr('data-group');
@@ -61,10 +79,13 @@ $(document).ready(function () {
         game.nextAtBat()
     });
 
-    $('#edit').click(function () {
-        // $('#player-entry').show();
-        // $('#game-on').hide();
+    $('#prev').click(function () {
         game.prevAtBat();
+    });
+
+    $('#edit').click(function () {
+        $('#player-entry').show();
+        $('#game-on').hide();
     });
 
     $('#restart-game').click(function () {

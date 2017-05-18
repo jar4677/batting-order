@@ -10,21 +10,26 @@
     margin: 5px;
 }
 
-#game-on {
+#game-on, #player-entry {
     display: none;
 }
 
 #game-on .player-list {
-    height: 10vh;
+    height: 20vh;
+    background-color: #333333;
 }
 
-#player-at-bat{
-    height: 80vh;
+#game-on .player-list-name {
+    color: whitesmoke;
+}
+
+#player-at-bat {
+    height: 60vh;
 }
 
 #game-on .btn, #at-bat {
     position: relative;
-    top: 40vh;
+    top: 30vh;
     transform: translateY(-50%);
 }
 
@@ -36,7 +41,7 @@
     margin-top: 2vh;
 }
 
-.heading h5{
+.heading h5 {
     padding-bottom: 2vh;
     border-bottom: 1px solid #333333;
 }
@@ -52,7 +57,12 @@
     font-size: 80px;
 }
 
-.at-bat {
+#game-on .vertical-center {
+    position: absolute;
+    transform: translate(50%, 130%);
+}
+
+#game-on .at-bat {
     color: red;
     font-weight: bold;
 }
